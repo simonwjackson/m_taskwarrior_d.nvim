@@ -386,7 +386,7 @@ end
 
 function M.apply_context_data(line, line_number)
   local _, query = string.match(line, M["task_query_pattern"].lua)
-  query = query.gsub(query, "status:.*%s", " ")
+  query = query.gsub(query, "status:.+?%s", " ")
   local count = 1
   local uuid = nil
   local tasks = {}
